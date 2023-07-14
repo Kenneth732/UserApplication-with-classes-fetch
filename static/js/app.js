@@ -72,7 +72,29 @@ class AnimalApp {
         const editButton = animalItem.querySelector('.editBtn');
         const donateBtn = animalItem.querySelector('.donateBtn');
   
-
+        deleteButton.addEventListener('click', () => {
+          const animalId = deleteButton.dataset.id;
+          this.handleDeleteRequest(animalId);
+        });
+  
+        editButton.addEventListener('click', () => {
+          const animalId = editButton.dataset.id;
+          const updatedAnimal = {
+            nameInput: prompt('Enter the new name:', animal.nameInput),
+            imageInput: prompt('Enter the new image URL:', animal.imageInput),
+            descriptionInput: prompt('Enter the new description:', animal.descriptionInput),
+            donations: animal.donations
+          };
+          this.handleEditRequest(animalId, updatedAnimal);
+        });
+  
+        donateBtn.addEventListener('click', () => {
+          const animalId = donateBtn.dataset.id;
+          this.handleDonateRequest(animalId);
+        });
+  
+        this.animalList.appendChild(animalItem);
+      });
     }
   
   }
