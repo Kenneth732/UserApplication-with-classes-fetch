@@ -15,7 +15,11 @@ class AnimalApp {
       this.handleRenderFetch();
     }
   
-
+    get nameInput() {
+      return this._nameInput.value;
+    }
+  
+  
   }
   
   // Create an instance of the AnimalApp class
