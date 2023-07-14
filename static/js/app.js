@@ -68,8 +68,11 @@ class AnimalApp {
           <button class="deleteBtn" data-id="${animal.id}">Delete</button>
         `;
   
-        this.animalList.appendChild(animalItem);
-      });
+        const deleteButton = animalItem.querySelector('.deleteBtn');
+        const editButton = animalItem.querySelector('.editBtn');
+        const donateBtn = animalItem.querySelector('.donateBtn');
+  
+
     }
   
   }
