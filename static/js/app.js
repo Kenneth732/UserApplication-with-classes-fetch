@@ -104,6 +104,22 @@ class AnimalApp {
         .catch(error => console.error(error));
     }
   
+    handlePostRequest(animal) {
+      fetch('http://localhost:3000/animalsData', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(animal)
+      })
+        .then(() => {
+          this.nameInput = '';
+          this.imageInput = '';
+          this.descriptionInput = '';
+          this.handleRenderFetch();
+        })
+        .catch(error => console.error(error));
+    }
 
   }
   
