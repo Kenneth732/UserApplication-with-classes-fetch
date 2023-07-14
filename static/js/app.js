@@ -52,7 +52,10 @@ class AnimalApp {
       this.handlePostRequest(newAnimal);
     }
   
-   
+    handleDisplay(data) {
+ 
+    }
+  
   }
   
   // Create an instance of the AnimalApp class
