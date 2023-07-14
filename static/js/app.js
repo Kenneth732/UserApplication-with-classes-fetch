@@ -39,6 +39,20 @@ class AnimalApp {
       this._descriptionInput.value = value;
     }
   
+    handleFormSubmit(e) {
+      e.preventDefault();
+  
+      const newAnimal = {
+        nameInput: this.nameInput,
+        imageInput: this.imageInput,
+        descriptionInput: this.descriptionInput,
+        donations: 0
+      };
+  
+      this.handlePostRequest(newAnimal);
+    }
+  
+   
   }
   
   // Create an instance of the AnimalApp class
