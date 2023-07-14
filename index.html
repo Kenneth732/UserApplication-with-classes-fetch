@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animal Website</title>
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+  <header id="menu">
+    <h1>Welcome to zkpr</h1>
+  </header>
+  <div class="container">
+    <form id="animal-form">
+      <div class="form-group">
+        <label for="nameInput">Name</label>
+        <input type="text" id="nameInput" name="nameInput">
+        <br>
+        <label for="imageInput">Image URL</label>
+        <input type="text" id="imageInput" name="imageInput">
+        <br>
+        <label for="descriptionInput">Description</label>
+        <textarea name="descriptionInput" id="descriptionInput"></textarea>
+        <br>
+        <button class="btn">Adopt Animal</button>
+      </div>
+    </form>
+    <ul id="animal-list" class="cards">
+      <!-- Animals here -->
+    </ul>
+  </div>
+  <script src="static/js/app.js"></script>
+</body>
+
+</html>
