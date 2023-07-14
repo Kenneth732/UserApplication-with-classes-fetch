@@ -31,6 +31,14 @@ class AnimalApp {
       this._imageInput.value = value;
     }
   
+    get descriptionInput() {
+      return this._descriptionInput.value;
+    }
+  
+    set descriptionInput(value) {
+      this._descriptionInput.value = value;
+    }
+  
   }
   
   // Create an instance of the AnimalApp class
