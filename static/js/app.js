@@ -145,6 +145,25 @@ class AnimalApp {
         .catch(error => console.error(error));
     }
   
+    handleDonateRequest(animalId) {
+      fetch(`http://localhost:3000/animalsData/${animalId}`)
+        .then((res) => res.json())
+        .then((animal) => {
+          const updatedDonations = animal.donations + 10;
+  
+          return fetch(`http://localhost:3000/animalsData/${animalId}`, {
+            method: 'PATCH',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ donations: updatedDonations }),
+          });
+        })
+        .then(() => {
+          this.handleRenderFetch();
+        })
+        .catch((error) => console.error(error));
+    }
   }
   
   // Create an instance of the AnimalApp class
