@@ -120,7 +120,17 @@ class AnimalApp {
         })
         .catch(error => console.error(error));
     }
-
+  
+    handleDeleteRequest(animalId) {
+      fetch(`http://localhost:3000/animalsData/${animalId}`, {
+        method: 'DELETE'
+      })
+        .then(() => {
+          this.handleRenderFetch();
+        })
+        .catch(error => console.error(error));
+    }
+  
   }
   
   // Create an instance of the AnimalApp class
