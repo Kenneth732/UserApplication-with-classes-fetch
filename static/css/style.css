@@ -69,3 +69,15 @@ body {
     margin-top: 0;
   }
   
+  .card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+  }
+  
+  .card p {
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
+  
