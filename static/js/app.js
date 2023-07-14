@@ -19,6 +19,9 @@ class AnimalApp {
       return this._nameInput.value;
     }
   
+    set nameInput(value) {
+      this._nameInput.value = value;
+    }
   
   }
   
