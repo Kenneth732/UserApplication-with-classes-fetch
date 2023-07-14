@@ -131,6 +131,20 @@ class AnimalApp {
         .catch(error => console.error(error));
     }
   
+    handleEditRequest(animalId, updatedAnimal) {
+      fetch(`http://localhost:3000/animalsData/${animalId}`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updatedAnimal)
+      })
+        .then(() => {
+          this.handleRenderFetch();
+        })
+        .catch(error => console.error(error));
+    }
+  
   }
   
   // Create an instance of the AnimalApp class
