@@ -28,6 +28,23 @@ class AnimalApp {
       this.handlePostRequest(newAnimal);
     }
   
+    handleDisplay(data) {
+      this.animalList.innerHTML = '';
+  
+      data.forEach(animal => {
+        const animalItem = document.createElement('li');
+        animalItem.classList.add('card');
+        animalItem.innerHTML = `
+          <h3>${animal.nameInput}</h3>
+          <img src="${animal.imageInput}" alt="${animal.name}">
+          <p>${animal.descriptionInput}</p>
+          <p>Donations: ${animal.donations}</p>
+          <button class="editBtn" data-id="${animal.id}">Edit</button>
+          <button class="donateBtn" data-id="${animal.id}">Donation</button>
+          <button class="deleteBtn" data-id="${animal.id}">Delete</button>
+        `;
+
+  
   }
   
   // Create an instance of the AnimalApp class
