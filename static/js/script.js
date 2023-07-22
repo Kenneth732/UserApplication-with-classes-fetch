@@ -15,6 +15,19 @@ class AnimalApp {
       this.handleRenderFetch();
     }
   
+    handleFormSubmit(e) {
+      e.preventDefault();
+  
+      const newAnimal = {
+        nameInput: this.nameInput.value,
+        imageInput: this.imageInput.value,
+        descriptionInput: this.descriptionInput.value,
+        donations: 0
+      };
+  
+      this.handlePostRequest(newAnimal);
+    }
+  
   }
   
   // Create an instance of the AnimalApp class
