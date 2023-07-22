@@ -73,6 +73,13 @@ class AnimalApp {
       });
     }
   
+    handleRenderFetch() {
+      fetch('http://localhost:3000/animalsData')
+        .then(res => res.json())
+        .then(data => this.handleDisplay(data))
+        .catch(error => console.error(error));
+    }
+  
   }
   
   // Create an instance of the AnimalApp class
