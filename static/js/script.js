@@ -80,6 +80,23 @@ class AnimalApp {
         .catch(error => console.error(error));
     }
   
+    handlePostRequest(animal) {
+      fetch('http://localhost:3000/animalsData', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(animal)
+      })
+        .then(() => {
+          this.nameInput.value = '';
+          this.imageInput.value = '';
+          this.descriptionInput.value = '';
+          this.handleRenderFetch();
+        })
+        .catch(error => console.error(error));
+    }
+  
   }
   
   // Create an instance of the AnimalApp class
