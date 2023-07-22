@@ -43,7 +43,14 @@ class AnimalApp {
           <button class="donateBtn" data-id="${animal.id}">Donation</button>
           <button class="deleteBtn" data-id="${animal.id}">Delete</button>
         `;
+  
+        const deleteButton = animalItem.querySelector('.deleteBtn');
+        const editButton = animalItem.querySelector('.editBtn');
+        const donateBtn = animalItem.querySelector('.donateBtn');
+  
 
+      });
+    }
   
   }
   
